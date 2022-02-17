@@ -5,6 +5,7 @@ import colors from 'colors';
 import morgan from 'morgan'
 import helmet from 'helmet'
 import compression from 'compression'
+import cors from 'cors'
 import connectDB from './config/db.js';
 import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 import productRoutes from './routes/productRoutes.js';
@@ -21,6 +22,7 @@ const app = express();
 app.use(express.json());
 app.use(helmet())
 app.use(compression())
+app.use(cors())
 
 if (process.env.NODE_ENV === 'development') {
 	app.use(morgan('dev'))
