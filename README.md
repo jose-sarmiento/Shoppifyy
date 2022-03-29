@@ -8,7 +8,6 @@ I use Express as backend framework for Node and MongoDB to store customer data.
 
 ### Features
 - Accept Paypal as payment gateway
-- Support websockets for instant messaging and Notifications
 - Authentication using JWT and Google OAuth
 - Validation
 - Custom middlewares
