@@ -19,7 +19,6 @@ const importData = async () => {
     await User.deleteMany()
 
     const createdUsers = await User.insertMany(users)
-    console.log(createdUsers[1])
 
     const adminUser = createdUsers[1]._id
 
