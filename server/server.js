@@ -22,6 +22,7 @@ const app = express();
 app.use(express.json());
 app.use(helmet({
     contentSecurityPolicy: false,
+    crossOriginEmbedderPolicy: false,
 }))
 app.use(compression())
 app.use(cors())
