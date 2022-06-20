@@ -21,12 +21,7 @@ connectDB();
 const app = express();
 app.use(express.json());
 app.use(helmet({
-    contentSecurityPolicy: {
-        directives: {
-         ...helmet.contentSecurityPolicy.getDefaultDirectives(),
-         "script-src": ["'self'", "'unsafe-inline'", "example.com"],
-        },
-    },
+    contentSecurityPolicy: false,
 }))
 app.use(compression())
 app.use(cors())
