@@ -14,7 +14,7 @@ const HomeScreen = () => {
   const { keyword } = useParams();
   const [products, setProducts] = useState([]);
   const [page, setPage] = useState(1);
-  const [pageSize] = useState(8);
+  const [pageSize] = useState(9);
   const [sort, setSort] = useState("createdAt");
   const [categories, setCategories] = useState([]);
   const [category, setCategory] = useState("all");

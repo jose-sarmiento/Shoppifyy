@@ -36,7 +36,6 @@ export default function usePaginateFetch(
       })
          .then((res) => {
             if (isMounted) {
-                     console.log(res.data.docs)
                      setResults((prevResults) => {
                      return [...prevResults, ...res.data.docs].filter(
                         (value, index, self) =>
