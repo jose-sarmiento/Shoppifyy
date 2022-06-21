@@ -33,11 +33,10 @@ Admin user can manage users, products and orders from the dashboard
 * Product Sales and Discounts
 
 ## Project Screen Shot(s)
-
-<img src="screenshots/homepage.png" alt="Shoppifyy homepage" width="800" />
+![Shoppifyy homepage!](screenshots/homepage.png)
 <br/>
 <br/>
-<img src="screenshots/viewproduct.png" alt="Shoppifyy view product screen" width="800" />
+![Shoppifyy view product screen!](screenshots/viewproduct.png)
 
 ## Installation and Setup Instructions
 
