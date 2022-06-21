@@ -34,10 +34,10 @@ Admin user can manage users, products and orders from the dashboard
 
 ## Project Screen Shot(s)
 
-<img src="screenshots/homepage.png" alt="Shoppifyy homepage" width="400" />
+<img src="screenshots/homepage.png" alt="Shoppifyy homepage" width="800" />
 <br/>
 <br/>
-<img src="screenshots/viewproduct.png" alt="Shoppifyy view product screen" width="400" />
+<img src="screenshots/viewproduct.png" alt="Shoppifyy view product screen" width="800" />
 
 ## Installation and Setup Instructions
 
@@ -46,6 +46,8 @@ Clone down this repository. You will need `node` and `npm` installed globally on
 Installation:
 
 `npm install` 
+
+`cd client && npm install`
 
 To Start Server:
 
