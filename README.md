@@ -14,7 +14,7 @@ Admin user can manage users, products and orders from the dashboard
 * JWT
 * Google OAuth
 
-### Frontend
+#### Frontend
 * React JS 
 * Redux
 * React Router Dom v6
@@ -24,6 +24,7 @@ Admin user can manage users, products and orders from the dashboard
 ## Features 
 
 * Admin can manage users, products and orders in Dashboard
+* Product reviews and ratings
 * Add to cart
 * Accept Paypal as payment gateway
 * Authentication using JWT and Google OAuth
@@ -33,9 +34,10 @@ Admin user can manage users, products and orders from the dashboard
 
 ## Project Screen Shot(s)
 
-![Socialize Homepage!](screenshots/homepage.png)
-
-![Socialize Profile Screen!](screenshots/profile.png)
+<img src="screenshots/homepage.png" alt="Shoppifyy homepage" width="400" />
+<br/>
+<br/>
+<img src="screenshots/viewproduct.png" alt="Shoppifyy view product screen" width="400" />
 
 ## Installation and Setup Instructions
 
