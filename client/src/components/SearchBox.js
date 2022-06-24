@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {Form, InputGroup, FormControl} from 'react-bootstrap'
 import { FaSearch } from "react-icons/fa"
 import {useHistory} from 'react-router-dom'
@@ -7,6 +7,12 @@ const SearchBox = () => {
 	const [keyword, setKeyword] = useState('')
 
 	const history = useHistory()
+
+    useEffect(() => {
+        if (keyword === "") {
+            history.push('/')
+        }
+    }, [keyword, history])
 
 	const submitHandler = (e) => {
 		e.preventDefault()

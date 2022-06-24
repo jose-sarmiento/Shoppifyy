@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import {useSelector, useDispatch} from "react-redux" 
 import HomeScreen from './screens/HomeScreen'
+import SearchScreen from './screens/SearchScreen'
 import LoginScreen from './screens/LoginScreen'
 import RegisterScreen from './screens/RegisterScreen'
 import CartScreen from './screens/CartScreen'
@@ -84,7 +85,7 @@ const App = () => {
                      <OrderListScreen />
                   </Route> 
                   <Route path='/search/:keyword' exact>
-                     <HomeScreen />
+                     <SearchScreen />
                   </Route>
                   <Route path='/page/:pageNumber' exact>
                      <HomeScreen />

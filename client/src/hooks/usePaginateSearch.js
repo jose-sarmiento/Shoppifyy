@@ -1,7 +1,12 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export default function usePaginateFetch(page, limit, sort = "createdAt") {
+export default function usePaginateFetch(
+    keyword,
+    page,
+    limit,
+    sort = "createdAt"
+) {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
     const [results, setResults] = useState([]);
@@ -9,16 +14,18 @@ export default function usePaginateFetch(page, limit, sort = "createdAt") {
     const [hasPrevious, setHasPrevious] = useState(false);
 
     useEffect(() => {
+        setResults([]);
+    }, [keyword]);
+
+    useEffect(() => {
         let isMounted = true;
         setLoading(true);
         setError(false);
 
-        const params = { page, limit, sort };
-
         axios({
             method: "GET",
             url: `/api/products`,
-            params: params,
+            params: { page, limit, sort, keyword },
         })
             .then((res) => {
                 if (isMounted) {
@@ -50,7 +57,7 @@ export default function usePaginateFetch(page, limit, sort = "createdAt") {
         return () => {
             isMounted = false;
         };
-    }, [page, limit, sort]);
+    }, [keyword, page, limit, sort]);
 
     return { loading, error, results, hasNext, hasPrevious };
 }

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
+import { useParams } from "react-router-dom";
 import { BsFilterLeft } from "react-icons/bs";
 import { FaLayerGroup } from "react-icons/fa";
 import { Row, Col } from "react-bootstrap";
@@ -6,10 +7,11 @@ import { v4 as uuidv4 } from "uuid";
 import Product from "../components/Product";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
-import usePaginateFetch from "../hooks/usePaginateFetch";
+import usePaginateSearch from "../hooks/usePaginateSearch";
 import banner from "../banner.jpg";
 
-const HomeScreen = () => {
+const SearchScreen = () => {
+    const { keyword } = useParams();
     const [products, setProducts] = useState([]);
     const [page, setPage] = useState(1);
     const [pageSize] = useState(9);
@@ -17,10 +19,15 @@ const HomeScreen = () => {
     const [categories, setCategories] = useState([]);
     const [category, setCategory] = useState("all");
 
-    const { loading, results, error, hasNext } = usePaginateFetch(
+    const { loading, results, error, hasNext } = usePaginateSearch(
+        keyword,
         page,
         pageSize
     );
+
+    useEffect(() => {
+        setPage(1);
+    },[keyword])
 
     // extract categories from the list
     useEffect(() => {
@@ -261,7 +268,7 @@ const HomeScreen = () => {
     );
 };
 
-export default HomeScreen;
+export default SearchScreen;
 // <Paginate pages={pages} page={page} keyword={keyword && keyword} />
 
 /*<Row>

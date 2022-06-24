@@ -3,7 +3,6 @@ import mongoose from 'mongoose';
 const paginate = (model) => {
    return async (req, res, next) => {
       const { keyword, sort, limit, page } = req.query;
-      
       let query = {};
       const response = {};
 
@@ -14,7 +13,7 @@ const paginate = (model) => {
 
       if(keyword) {
          query = {
-            name: {
+            "name": {
                $regex: keyword,
                $options: 'i'
              }
