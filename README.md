@@ -6,6 +6,13 @@ Admin user can manage users, products and orders from the dashboard
 
 [See project live](https://shoppifyy-ecommerce.herokuapp.com/)
 
+###### test customer account
+
+```
+    email: john@gmail.com
+    password: 123456
+```
+
 ## Technology used
 
 #### Backend:
@@ -33,10 +40,17 @@ Admin user can manage users, products and orders from the dashboard
 * Product Sales and Discounts
 
 ## Project Screen Shot(s)
+
+##### Homepage
 ![Shoppifyy homepage!](screenshots/homepage.png)
+&nbsp;
 <br/>
-<br/>
+##### View product
 ![Shoppifyy view product screen!](screenshots/viewproduct.png)
+&nbsp;
+<br/>
+##### Dashboard
+![Shoppifyy Dashboard!](screenshots/dashboard.png)
 
 ## Installation and Setup Instructions
 
